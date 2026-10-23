@@ -1,0 +1,74 @@
+/* Shared by graveyard.html and certificate.html */
+
+/* Without this, rules like "display: block" below would beat the hidden attribute */
+[hidden] {
+  display: none !important;
+}
+
+body {
+  margin: 0;
+  padding: 32px 16px;
+  background: #f3e9ff;
+  color: #5a2a4a;
+  font-family: monospace;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 8px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 18px;
+  font: bold 14px monospace;
+  color: #5a2a4a;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  background: #ffe066;
+  box-shadow: 0 3px 0 #c9a800;
+  cursor: pointer;
+}
+
+/* Graveyard */
+.stats {
+  margin-bottom: 24px;
+}
+
+.graves {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.grave {
+  padding: 16px;
+  border-radius: 12px;
+  background: #9bbc0f;
+  color: #0f380f;
+}
+
+.grave canvas {
+  image-rendering: pixelated;
+}
+
+.grave h2 {
+  margin: 4px 0;
+}
+
+.grave p {
+  margin: 4px 0;
+  font-size: 12px;
+}
+
+/* Certificate */
+#certificate {
+  display: block;
+  height: 75vh;
+  margin: 16px auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}

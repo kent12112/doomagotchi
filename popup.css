@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  padding: 16px;
+  width: 200px;
+  background: #f3e9ff;
+  font-family: monospace;
+}
+
+/* Egg-shaped shell: wider rounding at the top than the bottom */
+.egg {
+  height: 240px;
+  border-radius: 50% 50% 46% 46% / 60% 60% 40% 40%;
+  background: linear-gradient(160deg, #ffb3d1, #ff7eb3);
+  box-shadow: inset -8px -10px 0 rgba(0, 0, 0, 0.12), 0 6px 14px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+/* Old-school green LCD */
+.screen {
+  background: #9bbc0f;
+  color: #0f380f;
+  border: 6px solid #3a3a3a;
+  border-radius: 10px;
+  padding: 6px;
+  text-align: center;
+}
+
+canvas {
+  display: block;
+  image-rendering: pixelated; /* keep pixels sharp, no blur */
+}
+
+.hearts {
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.buttons {
+  display: flex;
+  gap: 14px;
+}
+
+.buttons button {
+  width: 22px;
+  height: 22px;
+  border: none;
+  border-radius: 50%;
+  background: #ffe066;
+  box-shadow: 0 3px 0 #c9a800;
+}
+
+#middle {
+  cursor: pointer;
+}
+
+#middle:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #c9a800;
+}
+
+#status {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 12px;
+  color: #5a2a4a;
+  white-space: pre-line; /* "\n" in the text becomes a line break */
+}
+
+#hatch {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+#hatch[hidden] {
+  display: none;
+}
+
+#hatch input {
+  flex: 1;
+  min-width: 0;
+  padding: 6px;
+  font: 12px monospace;
+  border: 2px solid #ff7eb3;
+  border-radius: 6px;
+}
+
+#hatch button,
+nav a {
+  font: bold 12px monospace;
+  color: #5a2a4a;
+}
+
+#hatch button {
+  border: none;
+  border-radius: 6px;
+  background: #ffe066;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+nav a[hidden] {
+  display: none;
+}

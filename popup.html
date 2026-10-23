@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="egg">
+      <div class="screen">
+        <canvas id="pet" width="120" height="96"></canvas>
+        <div id="hearts" class="hearts"></div>
+      </div>
+      <div class="buttons">
+        <button disabled></button>
+        <button id="middle" title="Hatch a new egg (only when dead)"></button>
+        <button disabled></button>
+      </div>
+    </div>
+    <div id="status"></div>
+
+    <form id="hatch">
+      <input id="name" placeholder="Name your new egg" maxlength="12" />
+      <button id="hatch-button">Hatch 🥚</button>
+    </form>
+
+    <nav>
+      <a href="#" id="certificate" hidden>📜 Certificate</a>
+      <a href="#" id="graveyard">🪦 Graveyard</a>
+    </nav>
+    <script src="pet.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
